@@ -56,7 +56,8 @@ if (isset($_SESSION['id'])) {
 <body>
 
 
-    <div>Quelques informations sur vous : </div>
+    <div class="container">
+        <h2>Quelques informations sur vous : </h2>
     <form action="" method="post">
         <h2>ID :</h2>
         <input type="text" name="id" id="" value=" <?php echo $userinfo['id'] ?>">
@@ -75,6 +76,7 @@ if (isset($_SESSION['id'])) {
         <input type="submit" name="submit-insc" value="delete">
 
     </form>
+    </div>
 </body>
 
 </html>

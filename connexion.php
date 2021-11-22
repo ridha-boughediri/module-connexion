@@ -18,6 +18,9 @@ if (isset($_POST['submit-connect'])) {
             $_SESSION["id"] = $affich["id"];
             header("Location: ./profil.php");
         }
+        else {
+            echo "mail";
+        }
     }
 }
 
@@ -36,8 +39,10 @@ if (isset($_POST['submit-connect'])) {
 </head>
    
 
+
 <body>      
-     <h1>Connectez-vous</h1>   
+    <div class="container">
+    <h1>Connectez-vous</h1>   
     <form action="" method="post">
         <h2>E-Mail</h2>
         <input type="email" name="email" id="" placeholder="lechat@detoto.io">
@@ -55,6 +60,7 @@ if (isset($_POST['submit-connect'])) {
         } ?>
     </p>
        
+    </div>
 </body>
 
 </html>

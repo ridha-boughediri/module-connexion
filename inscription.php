@@ -55,7 +55,9 @@ if (isset($_POST['submit-insc'])) {
    
 
 <body>   
-    <h1>Inscrivez-vous</h1>   
+   <div class="container">
+
+   <h1>Inscrivez-vous</h1>   
     <form action="" method="post">
         <h2>Prenom</h2>
         <input type="text" name="prenom" id="" placeholder="toto">
@@ -79,6 +81,7 @@ if (isset($_POST['submit-insc'])) {
             echo $error;
         } ?>
     </p>
+   </div>
 </body>
 
 </html>
