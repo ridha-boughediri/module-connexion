@@ -4,7 +4,7 @@ session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=moduleconnexion', 'root', '');
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-if (isset($_SESSION['id']) and $_SESSION['id'] > 0) {
+if (isset($_SESSION['id'])) {
     $getid = intval($_SESSION['id']);
     $requser = $bdd->prepare('SELECT * FROM utilisateurs WHERE id = ?');
     $requser->execute(array($getid));

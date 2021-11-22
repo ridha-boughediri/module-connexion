@@ -14,8 +14,8 @@ if (isset($_POST['submit-connect'])) {
 
         if ($count == 1) {
             
-            $affich= $recup->fetch();
-            $_SESSION["id"]= $affich["id"];
+            $affich = $recup->fetch();
+            $_SESSION["id"] = $affich["id"];
             header("Location: ./profil.php");
         }
     }

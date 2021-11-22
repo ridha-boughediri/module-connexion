@@ -5,9 +5,6 @@ $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $membres = $bdd->query("SELECT * FROM utilisateurs");
 
 
-
-
-
 if (isset($_GET['supprimer']) and !empty($_GET['supprimer'])) {
    
     $supprime = intval($_GET['id']);
@@ -51,9 +48,7 @@ if(isset($_GET['ajouter']) AND !empty($_GET['ajouter'])) {
                 <th>login</th>
                 <th>password</th>
                 <th>delete</th>
-                <th>add member</th>
-                <th>editer</th>
-
+                
 
             </tr>
 
@@ -71,9 +66,6 @@ if(isset($_GET['ajouter']) AND !empty($_GET['ajouter'])) {
                         <form action="#" method="get"> <input type="hidden" name="id" value="<?php echo $m["id"]; ?>"><input name="supprimer" type="submit" value="supprimer"> </form>
                     </th>
                     <!-- <th><form action="#"   method="post"><input name="hidden" type="submit" value="<?php echo $m["id"]; ?>"><input  name="editer" type="submit" value="modifier"> </form></th> -->
-                    <th>
-                        <form action="#" method="post"><input type="hidden" name="id" value="<?php echo $m["id"]; ?>"><input name="ajouter" type="submit" value="ajouter"></form>
-                    </th>
 
                 </tr>
             <?php } ?>
