@@ -47,7 +47,7 @@ if (isset($_POST['submit-insc'])) {
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inscription</title>
@@ -55,9 +55,10 @@ if (isset($_POST['submit-insc'])) {
    
 
 <body>   
+  
    <div class="container">
-
-   <h1>Inscrivez-vous</h1>   
+        <div class="item2">
+        <h1>Inscrivez-vous</h1>   
     <form action="" method="post">
         <h2>Prenom</h2>
         <input type="text" name="prenom" id="" placeholder="toto">
@@ -81,7 +82,8 @@ if (isset($_POST['submit-insc'])) {
             echo $error;
         } ?>
     </p>
-   </div>
+</div>
+</div>
 </body>
 
 </html>

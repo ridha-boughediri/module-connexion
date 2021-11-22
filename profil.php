@@ -48,6 +48,7 @@ if (isset($_SESSION['id'])) {
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROFIL</title>
@@ -56,7 +57,11 @@ if (isset($_SESSION['id'])) {
 <body>
 
 
-    <div class="container">
+  
+    <div class="container2">
+  <div class="item2">
+
+  <div class="container">
         <h2>Quelques informations sur vous : </h2>
     <form action="" method="post">
         <h2>ID :</h2>
@@ -77,6 +82,8 @@ if (isset($_SESSION['id'])) {
 
     </form>
     </div>
+  </div>
+</div> 
 </body>
 
 </html>

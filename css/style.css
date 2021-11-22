@@ -1,0 +1,51 @@
+html{
+
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.titreadmin{
+
+    justify-content: center;
+    text-align: center;
+}
+form{
+
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#lien{
+    text-decoration:forestgreen;
+
+}
+body{
+    display: grid;
+    background: darkseagreen;
+
+
+
+}
+
+
+
+
+
+
+.container {
+  display: grid;
+  background: darkseagreen;
+  grid-template-columns: 2fr;
+  grid-template-rows: 0.4fr 3fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row dense;
+  grid-template-areas:
+    "."
+    "item2"
+    ".";
+}
+
+.item2 { grid-area: item2;
+background: darksalmon; }

@@ -31,7 +31,7 @@ if (isset($_POST['submit-connect'])) {
    
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +42,8 @@ if (isset($_POST['submit-connect'])) {
 
 <body>      
     <div class="container">
-    <h1>Connectez-vous</h1>   
+        <div class="item2">
+        <h1>Connectez-vous</h1>   
     <form action="" method="post">
         <h2>E-Mail</h2>
         <input type="email" name="email" id="" placeholder="lechat@detoto.io">
@@ -61,6 +62,9 @@ if (isset($_POST['submit-connect'])) {
     </p>
        
     </div>
+        </div>
+      </div>
+     
 </body>
 
 </html>

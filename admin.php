@@ -32,13 +32,22 @@ if(isset($_GET['ajouter']) AND !empty($_GET['ajouter'])) {
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashbord</title>
 </head>
 
 <body>
-<div><h1>page admin</h1></div>
-    <table>
+
+
+
+
+
+<div class="container">
+        <div class="item2">
+
+
+        <table>
         <thead>
 
             <tr>
@@ -71,8 +80,8 @@ if(isset($_GET['ajouter']) AND !empty($_GET['ajouter'])) {
             <?php } ?>
         </tbody>
     </table>
-
-
+ </div>
+</div>
 
 </body>
 
