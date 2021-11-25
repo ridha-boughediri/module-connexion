@@ -22,7 +22,11 @@ if (isset($_POST['gosignup'])) {
 </head>
 
 <body>
-    <div class="container">
+<?php require("./fileconfig/header.php");  
+
+?>
+
+<div class="container">
     <header>
         <h1>Menu principal</h1>
     </header>

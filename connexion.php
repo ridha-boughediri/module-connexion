@@ -1,8 +1,6 @@
 <?php
-session_start();
 
-$bdd = new PDO('mysql:host=localhost:3306 ;dbname=ridha-boughediri_moduleconnexion', 'ridha-boughediri', '1234fivem@@@');
-$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+require('./fileconfig/startbdd.php');
 
 if (isset($_POST['submit-connect'])) {
     $email = htmlspecialchars($_POST["email"]);
@@ -40,13 +38,18 @@ if (isset($_POST['submit-connect'])) {
    
 
 
-<body>      
+<body>     
+    
+
+<?php require("./fileconfig/header.php");  
+
+?> 
     <div class="container">
         <div class="item2">
         <h1>Connectez-vous</h1>   
     <form action="" method="post">
         <h2>E-Mail</h2>
-        <input type="email" name="email" id="" placeholder="lechat@detoto.io">
+        <input type="text" name="email" id="" placeholder="lechat@detoto.io">
         <h2>Mot de Passe</h2>
         <input type="password" name="password" id="" placeholder="titi13">
         <h2>Submit</h2>

@@ -1,8 +1,5 @@
 <?php
-session_start();
-
-$bdd = new PDO('mysql:host=localhost:3306 ;dbname=ridha-boughediri_moduleconnexion', 'ridha-boughediri', '1234fivem@@@');
-$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+require('./fileconfig/startbdd.php');
 
 
 if (isset($_POST['submit-insc'])) {
@@ -55,6 +52,10 @@ if (isset($_POST['submit-insc'])) {
    
 
 <body>   
+
+<?php require("./fileconfig/header.php");  
+
+?>
   
    <div class="container">
         <div class="item2">
@@ -65,14 +66,14 @@ if (isset($_POST['submit-insc'])) {
         <h2>Nom</h2>
         <input type="text" name="nom" id="" placeholder="lechat">
         <h2>E-Mail</h2>
-        <input type="email" name="email" id="" placeholder="lechat@detoto.io">
+        <input type="text" name="email" id="" placeholder="lechat@detoto.io">
         <h2>Mot de Passe</h2>
         <input type="password" name="password" id="" placeholder="titi13">
         <h2>Confirmation du Mot de Passe</h2>
         <input type="password" name="repassword" id="" placeholder="titi13">
         <h2>Submit</h2>
         <input type="submit" name="submit-insc" value="inscription">
-        <input type="submit" name="update" value="update">
+     
 
     </form>
 

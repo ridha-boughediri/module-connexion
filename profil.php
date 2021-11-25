@@ -1,8 +1,8 @@
 <?php
-session_start();
+require('./fileconfig/startbdd.php');
+require('./fileconfig/userrecup.php');
 
-$bdd = new PDO('mysql:host=localhost:3306 ;dbname=ridha-boughediri_moduleconnexion', 'ridha-boughediri', '1234fivem@@@');
-$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 if (isset($_SESSION['id'])) {
     $getid = intval($_SESSION['id']);
@@ -23,21 +23,17 @@ if (isset($_SESSION['id'])) {
             header("Location: ./profil.php");
         
         }
-        // if (isset($_POST["nom"]) && !empty($_POST["nom"])){
-        //     $users = $bdd->prepare("UPDATE utilisateurs SET nom=? WHERE id=?");
-        //     $users->execute(array($nom,$_SESSION['id'] ));
-            
-        // }
-        // if (isset($_POST["email"]) && !empty($_POST["email"])){
-        //     $upda = $bdd->prepare("UPDATE utilisateurs SET login=? WHERE id=?");
-        //     $upda->execute(array($email,$_SESSION['id'] ));
-            
-        // }
+
+
+
+
     }
 
 
 }
-
+        // afficher le lien si l'user est admin
+if (isset($recupinfos['login']) and $recupinfos['login'] == 'admin') {
+}
 
 ?>
 
@@ -56,7 +52,9 @@ if (isset($_SESSION['id'])) {
 
 <body>
 
+<?php require("./fileconfig/header.php");  
 
+?>
   
     <div class="container2">
   <div class="item2">
@@ -71,14 +69,17 @@ if (isset($_SESSION['id'])) {
         <h2>Nom</h2>
         <input type="text" name="nom" id="" value="<?php echo $userinfo['nom'] ?>">
         <h2>E-Mail</h2>
-        <input type="email" name="email" id="" value="<?php echo $userinfo['login'] ?>">
+        <input type="text" name="email" id="" value="<?php echo $userinfo['login'] ?>">
         <h2>Mot de Passe</h2>
         <input type="password" name="password" id="" value=" <?php echo $userinfo['password'] ?>">
 
 
         <input type="submit" name="update" name=""value="modifier">
+      <?php  if (isset($recupinfos['login']) and $recupinfos['login'] == 'admin') {?>
+        <a href="admin.php">espace admin</a>
 
-        <input type="submit" name="submit-insc" value="delete">
+<?php } ?>
+        
 
     </form>
     </div>
